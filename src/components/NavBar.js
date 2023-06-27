@@ -1,10 +1,10 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+
 import React, { useState, useEffect } from 'react';
 
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import logo from '../assets/img/logo.svg';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -59,9 +59,9 @@ const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/raphael-okolo-480012227/"><img src={navIcon1} alt="navIcon1" /></a>
-              <a href="https://github.com/RaphDasilva"><img src={navIcon2} alt="navIcon2" /></a>
-              <a href="https://twitter.com/silvaz_creation"><img src={navIcon3} alt="navIcon3" /></a>
+              <a href="https://www.linkedin.com/in/raphael-okolo-480012227/" target="_blank" rel="noreferrer"><FaLinkedinIn className="soc-icon" /></a>
+              <a href="https://github.com/RaphDasilva" target="_blank" rel="noreferrer"><FaGithub className="soc-icon" /></a>
+              <a href="https://twitter.com/silvaz_creation" target="_blank" rel="noreferrer"><FaTwitter className="soc-icon" /></a>
             </div>
 
             <button className="vvd" type="submit">
