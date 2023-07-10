@@ -552,6 +552,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: space-between;
 }
 
+.btn {
+  margin-top: 10px;
+}
+
 .project-btn .btn {
   width: 48%;
   border: none;
@@ -588,8 +592,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .close-button:hover {
   color: #666;
-}
-
-.btn {
-  margin-top: 10px;
 }
