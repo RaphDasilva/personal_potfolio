@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { FaHtml5, FaReact, FaCss3 } from 'react-icons/fa';
-import { SiJavascript, SiRedux } from 'react-icons/si';
+import { SiJavascript, SiRedux, SiRubyonrails } from 'react-icons/si';
 import { BsBootstrap } from 'react-icons/bs';
 import { AiFillGithub } from 'react-icons/ai';
 import colorSharp from '../assets/img/color-sharp.png';
@@ -74,6 +74,11 @@ const Skills = () => {
                 <div className="item">
                   <AiFillGithub className="icon" />
                   <h5>Github</h5>
+                </div>
+
+                <div className="item">
+                  <SiRubyonrails className="icon" />
+                  <h5>Ruby on Rails</h5>
                 </div>
               </Carousel>
               <img className="background-img-left" src={colorSharp} alt="background img" />
