@@ -6,6 +6,8 @@ import { FaHtml5, FaReact, FaCss3 } from 'react-icons/fa';
 import { SiJavascript, SiRedux, SiRubyonrails } from 'react-icons/si';
 import { BsBootstrap } from 'react-icons/bs';
 import { AiFillGithub } from 'react-icons/ai';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 import colorSharp from '../assets/img/color-sharp.png';
 
 const Skills = () => {
@@ -34,12 +36,19 @@ const Skills = () => {
           <Col>
             <div className="skills-bx">
               <h2>Skills</h2>
-              <p>
-                With a strong passion for writing clean, accessible code,
-                <br />
-                {' '}
-                I bring a diverse skill set to the table, encompassing full-stack web development.
-              </p>
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div className={isVisible ? 'animate__animated animate__backInDown' : ''}>
+                    <p>
+                      With a strong passion for writing clean, accessible code,
+                      <br />
+                      {' '}
+                      I bring a diverse skill set to the table,
+                      encompassing full-stack web development.
+                    </p>
+                  </div>
+                )}
+              </TrackVisibility>
               <Carousel responsive={responsive} infinite className="skills-slider">
                 <div className="item">
                   <FaHtml5 className="icon" />
