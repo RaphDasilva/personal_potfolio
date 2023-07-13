@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ArrowDownCircle } from 'react-bootstrap-icons';
-import { Document, Page } from 'react-pdf';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 import headerImg from '../assets/img/header-img.png';
 
 const Banner = () => {
@@ -52,19 +53,27 @@ const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs="12" md="6" xl="7">
-            <span className="tagline">Welcome to my portfolio</span>
-            <h1>{"Hi, I'm Raphael, "}</h1>
-            <h1 className="wrap">{text}</h1>
-            <p>
-              I&apos;m a full-stack web developer with a strong passion
-              for writing clean, accessible code. My expertise lies in various languages,
-              frameworks, and technologies. I am particularly skilled in JavaScript, React,
-              HTML5, CSS3, Ruby, Rails, and Postgres.
-            </p>
-            <button type="submit">
-              My Cv
-              <ArrowDownCircle size={25} />
-            </button>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
+                  <span className="tagline">Welcome to my portfolio</span>
+                  <h1>{"Hi, I'm Raphael, "}</h1>
+                  <h1 className="wrap">{text}</h1>
+                  <p>
+                    I&apos;m a full-stack web developer with a strong passion
+                    for writing clean, accessible code. My expertise lies in various languages,
+                    frameworks, and technologies. I am particularly skilled in JavaScript, React,
+                    HTML5, CSS3, Ruby, Rails, and Postgres.
+                  </p>
+                  <button type="submit">
+                    <a href="https://docs.google.com/document/d/1hUiF4yhThfa84WraVexd1Gu8RKkDCW1Qkt63vkr6dak/edit?usp=sharing" target="_blank" className="cv" rel="noreferrer">
+                      Get my Resume
+                      <ArrowDownCircle size={25} />
+                    </a>
+                  </button>
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt="headder" />

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 import ProjectItems from './ProjectItems';
 import Categories from './Categories';
 import projectData from './project-data';
@@ -28,7 +30,13 @@ const Projects = () => {
           <Col>
             <h2>My Recent Works</h2>
             <Categories categorys={categorys} filterItems={filterItems} />
-            <ProjectItems projectContent={projectItems} />
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div className={isVisible ? 'animate__animated animate__fadeInDown' : ''}>
+                  <ProjectItems projectContent={projectItems} />
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>
