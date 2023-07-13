@@ -43,18 +43,26 @@ const NavBar = () => {
               Home
             </Nav.Link>
             <Nav.Link
+              href="#projects"
+              className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('projects')}
+            >
+              Projects
+            </Nav.Link>
+            <Nav.Link
               href="#skills"
               className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('skills')}
             >
               Skills
             </Nav.Link>
+
             <Nav.Link
-              href="#projects"
-              className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
-              onClick={() => onUpdateActiveLink('projects')}
+              href="#connect"
+              className={activeLink === 'connect' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('connect')}
             >
-              Projects
+              Contact me
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
@@ -64,11 +72,15 @@ const NavBar = () => {
               <a href="https://twitter.com/silvaz_creation" target="_blank" rel="noreferrer"><FaTwitter className="soc-icon" /></a>
             </div>
 
-            <button className="vvd" type="submit">
+            {/* <button className="vvd" type="submit">
               {' '}
-              <span>Let &apos;s Connect</span>
+              <span>
+                <a href="#connect">
+                  Let &apos;s Connect
+                </a>
+              </span>
               {' '}
-            </button>
+            </button> */}
           </span>
         </Navbar.Collapse>
       </Container>
