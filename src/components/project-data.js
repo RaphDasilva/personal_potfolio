@@ -4,6 +4,7 @@ import cryptoVault from '../assets/img/crypto-vault.JPG';
 import cinephilla from '../assets/img/cinephilla.JPG';
 import bookStore from '../assets/img/book-store.JPG';
 import abujaArt from '../assets/img/abuja-art-international.JPG';
+import silvermedia from '../assets/img/silvermedia.JPG';
 
 const projectData = [
   {
@@ -56,14 +57,16 @@ const projectData = [
     img: abujaArt,
     desc: 'This is a project which highlights Abuja annual dance festival event scheduled to take place 2023 and it was built using HTML, CSS, and JavaScript',
   },
-  // {
-  //   id: 6,
-  //   title: 'oreo dream',
-  //   category: 'shakes',
-  //   price: 18.99,
-  //   img: './images/item-6.jpeg',
-  //   desc: 'Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday',
-  // },
+  {
+    id: 6,
+    title: 'Silver Media',
+    category: 'Front End',
+    stacks: 'React, Material UI, Rapid API, HTML, CSS',
+    live: 'https://silver-media.onrender.com/',
+    github: 'https://github.com/RaphDasilva/youtube-clone',
+    img: silvermedia,
+    desc: 'Silver Media is a web-based video streaming application designed to bring you an immersive media experience. With Silver Media, you can explore a vast library of videos, from educational content to entertainment, created by users worldwide.',
+  },
   // {
   //   id: 7,
   //   title: 'bacon overflow',
