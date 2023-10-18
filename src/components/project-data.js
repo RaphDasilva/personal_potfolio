@@ -5,6 +5,7 @@ import cinephilla from '../assets/img/cinephilla.JPG';
 import bookStore from '../assets/img/book-store.JPG';
 import abujaArt from '../assets/img/abuja-art-international.JPG';
 import silvermedia from '../assets/img/silvermedia.JPG';
+import workoutWhiz from '../assets/img/exercise.JPG';
 
 const projectData = [
   {
@@ -67,14 +68,16 @@ const projectData = [
     img: silvermedia,
     desc: 'Silver Media is a web-based video streaming application designed to bring you an immersive media experience. With Silver Media, you can explore a vast library of videos, from educational content to entertainment, created by users worldwide.',
   },
-  // {
-  //   id: 7,
-  //   title: 'bacon overflow',
-  //   category: 'breakfast',
-  //   price: 8.99,
-  //   img: './images/item-7.jpeg',
-  //   desc: 'carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird ',
-  // },
+  {
+    id: 7,
+    title: 'Workout Whiz',
+    category: 'Front End',
+    stacks: 'React, Material UI, Rapid API, HTML, CSS',
+    live: 'https://workout-whiz.onrender.com/',
+    github: 'https://github.com/RaphDasilva/workout-whiz',
+    img: workoutWhiz,
+    desc: 'Workout-Whiz is a fitness and workout application that helps users plan, track, and optimize their fitness routines.',
+  },
   // {
   //   id: 8,
   //   title: 'american classic',
